@@ -1,0 +1,5 @@
+@mixin ease($name, $time)
+    @if $name == default
+        transition: $time all cubic-bezier(.18,.8,.5,.93)
+    @if $name == fast-slow
+        transition: $time all cubic-bezier(0.130, 0.720, 0.690, 0.980)

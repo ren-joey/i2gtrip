@@ -1,0 +1,220 @@
+@charset "UTF-8";
+/*font-family: 'Noto Sans TC', sans-serif*/
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+label {
+  margin-bottom: 0; }
+
+/******* Nav-tab 頁籤 *******/
+#nav-mb-a-tab, #nav-mb-b-tab {
+  -webkit-border-radius: 0px;
+          border-radius: 0px;
+  font-weight: normal;
+  text-shadow: none;
+  height: 50px;
+  line-height: 50px;
+  text-align: center; }
+
+/******* 頁籤按鈕 啟動 *******/
+.nav-tabs .nav-link.active {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: #000000 2px solid;
+  padding: 0;
+  color: #000000; }
+
+/******* 頁籤按鈕 未啟動 *******/
+.nav-item.nav-link {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: #FFFFFF 2px solid;
+  padding: 0;
+  color: #B9B9B9;
+  font-weight: normal; }
+
+/******* 頁籤按鈕 滑入 *******/
+.nav-item.nav-link:hover {
+  background-color: #F0F0F0;
+  color: #000000; }
+
+/******* 頁籤按鈕 分隔線 *******/
+.nav-tabs {
+  border-bottom: #E6E6E6 2px solid; }
+
+/******* Slider 拉桿 *******/
+/******* Button *******/
+.ui-slider .ui-slider-handle {
+  width: 24px;
+  height: 24px;
+  top: -9px;
+  -webkit-border-radius: 100%;
+          border-radius: 100%; }
+
+/******* Range Bar *******/
+.ui-slider .ui-slider-range {
+  background-color: #0085E1; }
+
+/******* Bar *******/
+.ui-slider-horizontal {
+  background-color: #D4D3D3; }
+
+.ui-widget.ui-widget-content {
+  border: 0; }
+
+#slider-range-price, #slider-range-area {
+  width: 90%;
+  margin-left: 5%;
+  height: 6px; }
+
+#amount_price, #amount_area {
+  width: 100%;
+  color: #0085E1;
+  text-align: center; }
+
+/******* 增減按鈕 *******/
+.min_add_btn {
+  width: 25px;
+  height: 25px;
+  border: #E6E6E6 1px solid;
+  text-align: center;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+  cursor: pointer; }
+
+.quty_type {
+  height: 25px;
+  width: 40px;
+  text-align: center; }
+
+/******* star icon *******/
+.star_box {
+  background-color: #0085E1;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  cursor: pointer; }
+
+.star_box:hover {
+  background-color: #FF848B; }
+
+/******* Accordion *******/
+.card-header {
+  -webkit-border-radius: 0px;
+          border-radius: 0px;
+  padding: 0;
+  border: 0; }
+
+.card {
+  -webkit-border-radius: 0px;
+          border-radius: 0px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: #DDDDDD 1px solid; }
+
+.card-body {
+  padding: 10px 0; }
+
+.card .btn {
+  -webkit-border-radius: 0px;
+          border-radius: 0px; }
+
+.card-header .btn-link {
+  width: 100%;
+  background-color: #F0F0F0;
+  padding: 0;
+  text-align: left;
+  color: #000000;
+  height: 50px;
+  line-height: 50px; }
+
+.card-header .btn-link:hover {
+  background-color: #E6E6E6;
+  text-decoration: none; }
+
+.card-header .btn-link:focus {
+  text-decoration: none; }
+
+.label_type_icon {
+  width: 29.3%;
+  margin: 2%;
+  cursor: pointer;
+  text-align: center;
+  background-color: #FFFFFF; }
+
+.label_type_icon:hover {
+  background-color: #F0F0F0; }
+
+.label_type {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  background-color: #FFFFFF;
+  cursor: pointer; }
+
+.label_type:hover {
+  background-color: #F0F0F0; }
+
+[data-toggle="collapse"] .fa:before {
+  content: "\f068"; }
+
+[data-toggle="collapse"].collapsed .fa:before {
+  content: "\f067"; }
+
+/******* right *******/
+.icon_like {
+  position: absolute;
+  z-index: 3;
+  top: 10px;
+  right: 25px;
+  background-image: url(../images/icon_heart_wh.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 100%;
+          background-size: 100%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  opacity: 0.7; }
+
+.icon_like:hover {
+  background-image: url(../images/icon_heart_pk.png);
+  opacity: 1; }
+
+.icon_crown {
+  position: absolute;
+  z-index: 3;
+  top: 10px;
+  left: 25px;
+  background-image: url(../images/icon_crown.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 100%;
+          background-size: 100%;
+  width: 40px;
+  height: 40px; }
+
+.icon_shield {
+  position: absolute;
+  z-index: 3;
+  top: 10px;
+  left: 70px;
+  background-image: url(../images/icon_shield.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 100%;
+          background-size: 100%;
+  width: 40px;
+  height: 40px; }
+
+/******* 輪播導航位置 *******/
+ol.carousel-indicators {
+  margin-bottom: 1vmin; }
+
+/******* 輪播導航圖示 *******/
+ol.carousel-indicators li {
+  width: 1vmin;
+  height: 1vmin;
+  -webkit-border-radius: 100px;
+          border-radius: 100px;
+  margin-right: 1vmin; }
+
+.d-block > .text {
+  color: black; }

@@ -1,0 +1,51 @@
+@import variables
+@import mixins/paddings
+
+.widget
+    border: 1px solid $median-grey
+    margin-bottom: 20px
+    .title
+        color: $grey
+        background-color: $median-grey
+        border: 1px solid
+        font-size: $font-sm
+        +paddings($font-md)
+    .user-img
+        > img
+            width: 100%
+    .widget-content
+        
+
+.menu-container
+  position: relative
+  font-size: 1.2rem
+  padding-top: 160px
+  background-color: #C88387
+  height: 80px
+  width: auto
+  color: #000000
+  ul
+    position: absolute
+    top: 110px
+    left: 100px
+    color: #FFFFFF
+    li
+      color: #FFFFFF
+      font-size: 20px
+      display: inline
+      margin: 10px
+
+.panel-default
+  width: 70%
+  margin: auto
+  border: 1px solid
+
+#div_user_photo
+  position: relative
+
+.connected, .panel-body
+  font-size: 16px
+
+#basic-info, #connected-account
+  text-align: right
+  padding-right: 30px

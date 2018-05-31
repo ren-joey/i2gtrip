@@ -1,0 +1,252 @@
+@import variables
+@import mixins/paddings
+@import mixins/ease
+@import mixins/rwd
+
+$form-grey: #E6E6E6
+
+.steps
+    background-color: $form-grey
+    color: white
+    display: flex
+    font-size: $font-sm
+    +paddings($font-sm)
+    position: relative
+    overflow: hidden
+    > .step-each
+        width: 25%
+        display: flex
+        justify-content: center
+        align-items: center
+        .num
+            height: $font-lg
+            width: $font-lg
+            border-radius: 50%
+            background-color: white
+            color: $form-grey
+            margin-right: 10px
+            text-align: center
+        .title
+            color: white
+            white-space: nowrap
+        +breakpoint(md)
+            .num
+                color: white
+                background-color: transparent
+                margin-right: 0
+            .title
+                font-size: $font-xs
+    .step-now
+        position: absolute
+        left: 0
+        top: 0
+        right: 0
+        bottom: 0
+        display: flex
+        > .step-each
+            width: 25%
+            background-color: $main-pink
+            color: white
+            position: relative
+            display: flex
+            justify-content: center
+            align-items: center
+            font-size: $font-sm
+            +paddings($font-sm)
+            &:nth-child(1)
+                z-index: 8
+            &:nth-child(2)
+                z-index: 7
+            &:nth-child(3)
+                z-index: 6
+            &:nth-child(4)
+                z-index: 5
+            .num
+                height: $font-lg
+                width: $font-lg
+                border-radius: 50%
+                background-color: white
+                color: $main-pink
+                margin-right: 10px
+                text-align: center
+            .title
+                color: white
+                white-space: nowrap
+                z-index: 9
+            +breakpoint(md)
+                .num
+                    color: white
+                    background-color: transparent
+                    margin-right: 0
+                .title
+                    font-size: $font-xs
+            &:not(:nth-child(4))::after
+                display: block
+                content: ''
+                position: absolute
+                right: 0
+                top: 0
+                width: 35px
+                height: 35px
+                transform: rotate(45deg)
+                transform-origin: 55% 100%
+                background-color: $main-pink
+                border-top: 2px solid white
+                border-right: 2px solid white
+
+form.main-form
+    color: $grey
+    font-size: $font-sm
+    display: block
+    .each-list
+        +paddings($font-md)
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        .title
+            width: 100px
+            font-size: $font-sm
+            margin-right: $font-lg
+            &.full
+                width: 100%
+                display: flex
+                > input, select
+                    margin-left: 10px
+        .input-box
+            flex: 1
+            display: flex
+            align-items: center
+            flex-wrap: wrap
+    select
+        height: 34px
+    input, select
+        border-radius: 5px
+        color: $grey
+        border: 1px solid
+        margin-right: 10px
+        margin-top: 5px
+        margin-bottom: 5px
+        padding-left: 10px
+        padding-right: 10px
+        padding-top: 4px
+        padding-bottom: 4px
+        & ~ label
+            margin-right: 20px
+        &.input-sm
+            width: $font-xl
+        &.input-lg
+            +paddings($font-lg)
+        &.light-border
+            border: 1px solid $median-grey
+    ::placeholder
+        color: $median-grey
+    .comment
+        font-size: $font-xs
+        color: $grey
+        opacity: 0.8
+    [type="radio"]
+        &:checked, &:not(:checked)
+            position: absolute
+            left: -9999px
+        &:checked + label, &:not(:checked) + label
+            position: relative
+            padding-left: 28px
+            cursor: pointer
+            line-height: 20px
+            display: inline-block
+            color: #666
+        &:checked + label:before, &:not(:checked) + label:before
+            content: ''
+            position: absolute
+            left: 0
+            top: 0
+            width: 18px
+            height: 18px
+            border: 1px solid $grey
+            border-radius: 100%
+            background: #fff
+        &:checked + label:after
+            content: ''
+            width: 12px
+            height: 12px
+            background: $main-pink
+            position: absolute
+            top: 3px
+            left: 3px
+            border-radius: 100%
+            -webkit-transition: all 0.2s ease
+            transition: all 0.2s ease
+        &:not(:checked) + label:after
+            content: ''
+            width: 12px
+            height: 12px
+            background: $main-pink
+            position: absolute
+            top: 4px
+            left: 4px
+            border-radius: 100%
+            -webkit-transition: all 0.2s ease
+            transition: all 0.2s ease
+            opacity: 0
+            -webkit-transform: scale(0)
+            transform: scale(0)
+        &:checked + label:after
+            opacity: 1
+            -webkit-transform: scale(1)
+            transform: scale(1)
+
+.svg-img
+    width: $font-lg * 1.2
+    height: $font-lg * 1.2
+    img
+        position: relative
+        top: 50%
+        transform: translateY( -50% )
+        max-height: 100%
+
+.next-btn
+    display: inline-block
+    background-color: $main-pink
+    color: white
+    font-size: $font-md
+    letter-spacing: $font-xs
+    cursor: pointer
+    text-align: center
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .3)
+    +paddings($font-md)
+    +ease(default, 1s)
+    &.sm-btn
+        font-size: $font-sm
+        letter-spacing: 2px
+    &:hover, &:active, &:visited
+        color: white
+        background-color: $dean-pink
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, .2)
+    &.primary
+        background-color: $main-blue
+    &.cancel
+        background-color: #AAAAAA
+    &.google, &.facebook, &.wechat
+        position: relative
+        font-size: $font-xs
+        letter-spacing: $font-xs / 5
+        padding-left: 30px
+        .fa
+            position: absolute
+            left: 15px
+            top: 50%
+            color: white
+            font-size: $font-md
+            transform: translateY(-50%)
+    &.google
+        background-color: $google-red
+    &.facebook
+        background-color: $facebook-blue
+    &.wechat
+        background-color: $wechat-green
+
+
+        
+
+
+

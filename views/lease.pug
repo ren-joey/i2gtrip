@@ -1,0 +1,139 @@
+extends _layout/global_page
+include _plugins/message.pug
+
+block head_end
+
+block content
+    // ****START**** only for this page
+    link(rel="stylesheet", href="./css/lease.css")
+    // ****END**** only for this page
+
+    //- +message('all')
+    article.full-ad.d-flex(style="background-image: url(./images/ad01.jpg)")
+        .row
+            .col-12.col-md-6
+                .ad-container.d-flex.d-column
+                    .title
+                        |最多元的管道！
+                        br
+                        |最方便的租屋！
+                    .content
+                        |在愛豬出租網上刊登房源非常的簡單，而且費用全免！請描述您的住宿空間、新增照片和詳情。
+                    .control-bar
+                        a.send-btn(href="./post-estate") 立即出租 〉
+    .container
+        .row
+            .col-12
+                .box
+                    .title
+                        |房東您累了嗎？
+        .row
+            .col-6
+                .box.d-flex.d-center
+                    img(src="./images/svg/person-dollar.svg", alt="", width="50%", height="auto")
+            .col-6.center-col
+                .box
+                    .title
+                        |催催催
+                        br
+                        |「房租」就怕收不到
+                    .content
+                        |青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空。
+        .row
+            .col-6.center-col
+                .box
+                    .title
+                        |追追追
+                        br
+                        |「修繕」就是叫不來
+                    .content
+                        |青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空。
+            .col-6
+                .box.d-flex.d-center
+                    img(src="./images/svg/house-fix.svg", alt="", width="50%", height="auto")
+        .row
+            .col-6
+                .box.d-flex.d-center
+                    img(src="./images/svg/person-chat.svg", alt="", width="50%", height="auto")
+            .col-6.center-col
+                .box
+                    .title
+                        |忙忙忙
+                        br
+                        |「帶看」安心免煩惱
+                    .content
+                        |青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空。
+        .row
+            .col-6.center-col
+                .box
+                    .title
+                        |快快快
+                        br
+                        |「來電」馬上幫你管
+                    .content
+                        |青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空。
+            .col-6
+                .box.d-flex.d-center
+                    img(src="./images/svg/mobile-hand.svg", alt="", width="50%", height="auto")
+        .row
+            .col-12
+                a.send-btn.d-ib(href="./post-estate") 立即出租 〉
+
+    .container.p-T-100
+        .row
+            .col-12
+                .box
+                    .title  如何成為愛豬房東？
+        .row
+            .col-2
+                .box
+                    .num 01
+            .col-5.center-col
+                .box
+                    .title 刊登房源
+                    .content
+                        | 在愛豬出租網上刊登房源非常的簡單，而且費用全免！請描述您的住宿空間、新增照片和詳情。
+                        br
+                        | 您如果需要代刊、代管與代看，我們隨時歡迎您申請iLease電子門鎖服務。
+                    .send-btn.d-ib 了解更多
+            .col-5
+                .box.d-flex.d-center
+                    img(src="./images/svg/house-rent.svg", alt="", width="80%", height="auto")
+        .row
+            .col-5
+                .box.d-flex.d-center
+                    img(src="./images/svg/house-key.svg", alt="", width="100%", height="auto")
+            .col-2
+                .box
+                    .num 02
+            .col-5.center-col
+                .box
+                    .title 輕易出租
+                    .content
+                        | 透過我們的平台，您可以輕鬆向房客發送訊息並且管理看房，我們將會自動為您整併至行事曆中。
+                        br
+                        | 24小時的客服聊聊豬，為您優先處理並過濾房客的疑難雜症，讓您不再為房客煩惱。
+        .row
+            .col-2
+                .box
+                    .num 03
+            .col-5.center-col
+                .box
+                    .title 輕鬆收租
+                    .content
+                        | 透過愛豬網的安全支付金流系統，您永遠都不需要直接處理款項。
+                        br
+                        | 您可以透過PayPal、直接存款或國際電匯等方式收款，愛豬網也會為您整理每月的款項明細與收支表，省去繁雜的收款記錄。
+            .col-5
+                .box.d-flex.d-center
+                    img(src="./images/svg/money-bag.svg", alt="", width="80%", height="auto")
+        .row
+            .col-12.text-center
+                a.send-btn.d-ib(href="./post-estate") 立即出租 〉
+            
+
+            
+
+
+
+    

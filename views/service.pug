@@ -1,0 +1,130 @@
+extends _layout/global_page
+include _plugins/message.pug
+
+block head_end
+    
+block content
+    // ****START**** only for this page
+    link(rel="stylesheet", href="./css/service.css")
+    // ****END**** only for this page
+    //- +message('all')
+    article#jumbo.jumbotron(position='relative')
+        div(align='left')
+            h3 有問題需要幫忙嗎？
+            h3 您來對地方了！
+            br
+            h5 您可以觀看以下服務介紹與問題
+            h5 解說，或是您也可以直接詢問我們
+            h5 的客服聊聊豬
+        img#logo2(src='images/image_pig.svg', width='200px', height='200px')
+    br
+    .container.service-page
+        .row
+            .col-12.col-sm-6.col-md-4
+                p.introduce 01
+                p 最方便的租屋！想租就租
+                img.icon(src='images/icon_01.svg')
+                p
+                    | 無論你是學生、家庭、商務出差的上班族，還是想要打工度假、自助旅行甚至是家族旅遊，在這裡都可以隨時找到最適合的房子！
+            .col-12.col-sm-6.col-md-4
+                p.introduce 02
+                p 即時聯繫，多方整合！
+                img.icon(src='images/icon_02.svg')
+                p
+                    | 不想一通一通電話預約看房嗎？不想再找不到房東協助修繕了嗎？愛豬網的多方整合服務，提供最方便的使用者體驗。
+            .col-12.col-sm-6.col-md-4
+                p.introduce 03
+                p 線上即時預約看房
+                img.icon(src='images/icon_03.svg')
+                p
+                    | 內建即時通訊系統，輸入即可預約看房，並整合行事曆與GOOGLE MAP, 讓您不再擔心錯過預約！
+            .col-12.col-sm-6.col-md-4
+                p.introduce 04
+                p 客服聊聊豬小助手隨時回覆
+                img.icon(src='images/icon_01.svg')
+                p
+                    | 怎麼預約看房？我有問題怎麼辦？內建客服聊聊豬，24小時在線，隨時回覆您的任何疑惑！
+            .col-12.col-sm-6.col-md-4
+                p.introduce 05
+                p 資料雲端留存，不怕找不到
+                img.icon(src='images/icon_02.svg')
+                p
+                    | 租了好幾年，每次都找不到合約丟到哪裡？到底有哪些房客規定？資料雲端留存，再也不怕不清楚！
+            .col-12.col-sm-6.col-md-4
+                p.introduce 06
+                p 修繕即時服務
+                img.icon(src='images/icon_03.svg')
+                p
+                    | 每次房間有問題，又找不到房仲了？房東遠在國外，到底該怎麼辦？即時預約修繕，我們都幫您處理到好！
+    br
+    br
+    .more_main(align='center')
+        p 您如果需要代刊、代管與代看，我們隨時歡迎您申請iLease電子門鎖服務。
+        .more 了解更多
+    br
+    hr
+    br
+    .question.service-page
+        h3 常見問題
+        br
+        .container
+            .row
+                .col-12.col-sm-6
+                    p
+                        u 聯絡客服
+                    p 什麼是聊聊豬？
+                    p 聊聊豬能跟其他通訊軟體串聯嗎？
+                    p 除了聊聊豬，還可以透過哪些通訊方式聯繫客服？
+                .col-12.col-sm-6
+                    p
+                        u 註冊問題
+                    p 顯示手機已被使用怎麼辦？
+                    p 可以註冊多個愛豬網帳戶嗎？
+                    p 資料審核不通過時怎麼辦？
+                    br
+                .col-12.col-sm-6
+                    p
+                        u 登入問題
+                    p 忘記帳戶/密碼？
+                    p 如何重置密碼？
+                    p 無法登入愛豬會員怎麼辦？
+                    br
+                .col-12.col-sm-6
+                    p
+                        u 資料變更
+                    p 如何修改個人資料？
+                    p 如何停用使用中帳戶？
+                    p 如何變更或解除Facebook帳號的連結？
+                    br
+                .col-12.col-sm-6
+                    p
+                        u 帳號安全
+                    p
+                        | 驗證銀行卡號、身份證字號等個人資訊時，有
+                        br
+                        |  安全風險嗎？
+                    p 電子郵件或手機收不到驗證碼怎麼辦？
+                    p 我的帳號好像被盜用了，該怎麼辦？
+                    br
+                .col-12.col-sm-6
+                    p
+                        u 付款問題
+                    p 接受哪種付款方式？
+                    p 信用卡付費失敗該怎麼辦？
+                    p 變更、更新信用卡資料
+                    br
+                .col-12.col-sm-6
+                    p
+                        u iLease出租管理系統
+                    p 什麼是iLease？
+                    p 哪裡可以購買iLease出租管理服務？
+                    p iLease收費方式
+                .col-12.col-sm-6
+                .col-12.text-center
+                    .query_all 查看全部
+
+
+
+
+
+

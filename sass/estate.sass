@@ -1,0 +1,87 @@
+@import variables
+@import mixins/paddings
+
+body
+    background-color: #F7F8F8
+
+.svg-img
+    width: $font-lg * 1.2
+    height: $font-lg * 1.2
+    margin-right: 10px
+    img
+        position: relative
+        top: 50%
+        transform: translateY( -50% )
+        max-height: 100%
+
+.container.estate
+    background-color: white
+    border-left: 1px solid $grey
+    border-right: 1px solid $grey
+    border-bottom: 1px solid $grey
+    overflow: auto
+    > div
+        +margins($font-lg)
+    .estate-gallery
+        display: flex
+        justify-content: space-around
+        > .each
+            width: 20%
+            +paddings($font-xs)
+        img 
+            width: 100%
+    .estate-title-bar
+        display: flex
+        color: $grey
+        align-items: stretch
+        > .left
+            flex: 1
+            > div
+                margin-bottom: 10px
+            > .desc
+                font-size: $font-xs
+                display: flex
+                align-items: center
+                .text
+                    margin-right: 20px
+            > .title
+                font-size: $font-lg
+        > .right
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+            justify-content: flex-end
+            > div
+                margin-bottom: 10px
+            .stars
+                width: 100%
+                display: flex
+                justify-content: space-around
+                img
+                    width: 20px
+                    height: 20px
+            .price
+                font-size: $font-lg
+    .estate-info
+        color: $grey
+        font-size: $font-sm
+        line-height: $font-sm * 2
+    > .estate-desc
+        color: $grey
+        > div
+            margin-bottom: 10px
+        .title
+            font-size: $font-md
+        .content
+            font-size: $font-xs
+            display: flex
+            flex-wrap: wrap
+            &.c-center
+                justify-content: center
+                align-items: center
+            .each
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                +paddings($font-sm)

@@ -1,0 +1,87 @@
+@import variables
+@import mixins/paddings
+
+body
+    background-color: $light-grey
+
+.login-wrapper
+    width: 100vw
+    min-height: calc( 100vh - 170px )
+    padding-top: 170px
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    .main-form
+        position: relative
+        background-color: white
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3)
+        border: #CCCCCC 1px solid
+        width: 400px
+        .login-switch
+            width: 100%
+            display: flex
+            border-bottom: 1px solid #CCCCCC
+            > div
+                cursor: pointer
+                width: 50%
+                text-align: center
+                font-size: $font-sm
+                color: $median-grey
+                +paddings($font-lg)
+            .login-tab
+                &.active
+                    color: $grey
+                    border-bottom: 2px solid $grey
+            .register-tab
+                &.active
+                    color: $grey
+                    border-bottom: 2px solid $grey
+        .login-content
+            padding: $font-xl
+            .input-box
+                margin-bottom: 10px
+                input[type="text"], input[type="password"]
+                    width: 100%
+                input#lastName
+                    width: 30%
+                input#firstName
+                    width: 70%
+                    margin-right: 0
+                input[type="checkbox"]
+                    + label
+                        font-size: $font-xs
+                .next-btn
+                    width: 100%
+                .forget-btn
+                    display: block
+                    text-align: right
+                    font-size: $font-xs
+                    color: $grey
+            .login-social
+                margin-top: $font-lg
+                border-top: 1px solid $grey
+                padding-top: 20px
+                padding-bottom: 20px
+                position: relative
+                > .title
+                    position: absolute
+                    +paddings($font-sm)
+                    font-size: $font-xs
+                    top: 0
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    letter-spacing: $font-xs / 2
+                    background-color: white
+                    white-space: nowrap
+    &.tab1
+        .register
+            display: none !important
+    &.tab2
+        .login
+            display: none !important
+
+
+                    
+
+

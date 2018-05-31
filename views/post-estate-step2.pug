@@ -1,0 +1,121 @@
+extends _layout/global_page
+include _plugins/message.pug
+
+block head_end
+
+block content
+    // ****START**** only for this page
+    link(rel="stylesheet", href="./css/form.css")
+
+    // datepicker 2.0
+    link(rel="stylesheet", href="./libraries/datepicker/datepicker.css")
+    script(src="./libraries/datepicker/datepicker.js")
+    // ****END**** only for this page
+    //- +message('all')
+    .container.p-T-150
+        .steps
+            .step-each
+                .num 1
+                .title 刊登房源
+            .step-each
+                .num 2
+                .title 房源資訊
+            .step-each
+                .num 3
+                .title 基本資料
+            .step-each
+                .num 4
+                .title 資料認證
+            .step-now
+                .step-each
+                    .num 1
+                    .title 刊登房源
+                .step-each
+                    .num 2
+                    .title 房源資訊
+        form.main-form.m-T-50
+            .each-list
+                .title 房源照片
+                .input-box
+                    input(type="text")
+            hr
+            .each-list
+                .title 上傳此房源的土地權狀
+                .input-box
+                    input(type="text")
+            hr
+            .each-list
+                .title.full 您有其他相似的房源嗎？選擇的相似房源，可以協助填寫以下資訊
+                .input-box
+                    select
+                        option 台中市北區進化路588號・獨立套房
+            hr
+            .each-list
+                .title 房屋型態
+                .input-box
+                    select
+                        option 電梯大樓
+                .title 社區
+                .input-box
+                    input(type="text" placehold)
+                .title 房屋型態
+                .input-box
+                    select
+                        option 電梯大樓
+            .each-list
+                .title 房型
+                .input-box
+                    select
+                        option 獨立套房
+                .title 所在樓層
+                .input-box
+                    input.input-sm(type="text")
+            hr
+            .each-list
+                .title 管理費
+                .input-box
+                    input#test1(type='radio', name='radio-group', checked='')
+                    label(for='test1') 無
+                    input#test2(type='radio', name='radio-group')
+                    label(for='test2') 有，金額
+                    input(type="text" placeholder="輸入金額")
+            hr
+            .each-list
+                .title 最短租期
+                .input-box
+                    select
+                        option 1年
+            hr
+            .each-list
+                .title 法用途徑
+                .input-box
+                    select
+                        option 商業用
+            hr
+            .each-list
+                .title 朝向
+                .input-box
+                    select
+                        option 坐北朝南
+            hr
+            .each-list
+                .title.full 格局
+            hr
+            .each-list
+                .input-box
+                    .comment
+                        | 快完成了！往下塡寫房源設施與細項，讓房客更瞭解您的房源！
+            .each-list
+                a.next-btn(href="post-estate-step3") 下一步
+
+
+                    
+
+    
+            
+
+            
+
+
+
+    

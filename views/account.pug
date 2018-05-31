@@ -1,0 +1,186 @@
+extends _layout/global_page
+include _plugins/message.pug
+
+block head_end
+
+
+block content
+    // ****START**** only for this page
+    link(rel="stylesheet", href="./css/form.css")
+    link(rel="stylesheet", href="./css/account.css")
+
+    // datepicker 2.0
+    link(rel="stylesheet", href="./libraries/datepicker/datepicker.css")
+    script(src="./libraries/datepicker/datepicker.js")
+    // ****END**** only for this page
+    //- +message('all')
+    include _base/member-header
+
+    section.container.mt-5
+        .widget
+            h2.title 個人資料相片
+            .row
+                .col-12.col-sm-4
+                    .box.center-box.sm-box
+                        .user-img
+                            img(src='./images/user.png')
+                .col-12.col-sm-8
+                    .box.center-box.sm-box
+                        .text 請上傳可清楚顯示面部的照片，有利於房東和房客互相了解喔！
+                        .next-btn.sm-btn.primary 上傳照片
+        .widget
+            h2.title 串連帳號
+            .widget-content
+                
+                
+
+
+
+    #div_user_photo.panel-default(style='border: 1px solid')
+        .panel-heading
+            h3.panel-title(style='font-size:16px') 個人資料相片
+        .panel-body
+            img(src='./images/user.png', style='width: 130px; height: 130px')
+            .user_photo
+                h3 請上傳可清楚顯示面部的照片，有利於房東和房客互相了解喔！
+                br
+                div(style='width: 150px; height: 30px; background-color: #476B9E; \
+                color: white; text-align: center; line-height: 30px')
+                    | 上傳照片
+    .panel-default
+        .panel-heading
+            h3.panel-title 串連帳號
+        .panel-body
+            form.connected
+                .row
+                    #connected-account.col-3 Google+
+                    .col-2(style='border: 1px solid') 已驗證
+                    .col-4(style='border: 1px solid') chichinini@gmail.com
+                br
+                .row
+                    #connected-account.col-3 Facebook
+                    .col-9 +新增串連至Facebook
+                br
+                .row
+                    #connected-account.col-3 WeChat
+                    .col-2(style='border: 1px solid') 已驗證
+                    .col-4(style='border: 1px solid') chichinini@gmail.com
+    .panel-default(position='relative')
+        .panel-heading
+            h3.panel-title 個人基本資料
+        #panel-body.panel-body
+            .row
+                #basic-info.col-md-3 姓氏
+                input.col-md-3(type='text')
+                br
+                .col-md-6
+            .row
+                #basic-info.col-md-3 名字
+                input.col-md-3(type='text')
+                br
+                .col-md-6
+            .row
+                #basic-info.col-md-3 性別
+                input.col-md-1(type='text')
+                br
+                .col-md-8
+            .row
+                #basic-info.col-3 電子郵件
+                input.col-4(type='text')
+                br
+                .col-2.ml-3(style='background-color: #476B9E; color: white') 傳送電子郵件認證
+                .col-2
+            .row
+                .col-3
+                .col-9 +新增電子郵件
+            .row
+                #basic-info.col-3 電話號碼
+                .col-6(style='height: 170px; border:1px solid')
+                    p 請輸入電話號碼。
+                    .row
+                        .col-4 選擇國家
+                        .col-8
+                            select
+                                option 台灣
+                    .row
+                        .col-4 新增電話號碼
+                        .col-3
+                            div(style='border: 1px solid') +886
+                        div(class-='col')
+                            input
+                    .row
+                        .col-4(style='background-color: #476B9E; color: white') 傳送手機簡訊認證
+            hr
+            br
+            he
+                strong 證件一、請提供您的身分證件正反面
+                br
+                br
+                div(style='border: 1px solid; height: 300px')
+                    .row
+                        img#document.col-5(src='./images/cloud.svg', style='width: 256px; height: 256px')
+                        .col-2
+                        img#document.col-5(src='./images/camera.svg', style='width: 256px; height: 256px')
+                br
+                p 此為隱私資訊，僅供愛豬網審核身份使用。
+                br
+                hr
+                br
+                h3
+                    strong 證件二、請提供您的健保卡、駕照或護照的正反面
+                br
+                div(style='border: 1px solid; height: 300px')
+                    .row
+                        img#document.col-5(src='./images/cloud.svg', style='width: 256px; height: 256px')
+                        .col-2
+                        img#document.col-5(src='./images/camera.svg', style='width: 256px; height: 256px')
+                br
+                p 此為隱私資訊，僅供愛豬網審核身份使用。
+                br
+                hr
+                br
+            h3
+                strong 收款帳號一
+            br
+            div
+                form
+                    h4 銀行代號
+                    input(type='text', name='', hint='銀行代號')
+                br
+                form
+                    h4 收款戶名
+                    input(type='text', name='', hint='銀行代號')
+                br
+                form
+                    h4 收款帳號
+                    input(type='text', name='', hint='銀行代號')
+            br
+            hr
+            br
+            h3
+                strong 收款帳號二
+            br
+            div
+                form
+                    h4 銀行代號
+                    input(type='text', name='', hint='銀行代號')
+                br
+                form
+                    h4 收款戶名
+                    input(type='text', name='', hint='銀行代號')
+                br
+                form
+                    h4 收款帳號
+                    input(type='text', name='', hint='銀行代號')
+            br
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,110 @@
+@import variables
+@import mixins/paddings
+@import mixins/rwd
+@import mixins/ease
+
+header#i2gtrip
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+    background-color: white
+    z-index: 10
+    > .header-container
+        display: flex
+        .brand
+            > h1
+                display: none
+            +paddings($font-xl)
+        .menu-bar-mobile
+            display: none
+        .menu-bar
+            margin-left: auto
+            display: flex
+            justify-content: flex-end
+            align-items: center
+            padding-right: $font-md * 2
+            margin-bottom: 0
+            li
+                display: block
+                .option
+                    display: block
+                    .name
+                        font-size: $font-md
+                        color: $grey
+                        cursor: pointer
+                        white-space: nowrap
+                        +paddings($font-md)
+                        +ease(default, .5s)
+                    &:hover
+                        .name
+                            color: #999999
+        +breakpoint(pad-portrait)
+            .brand
+                +paddings($font-lg)
+                transform: scale(.8)
+            .menu-bar
+                padding-right: $font-sm * 2
+                li
+                    .option
+                        .name
+                            font-size: $font-sm
+                            +paddings($font-sm)
+        +breakpoint(tablet)
+            .menu-bar
+                display: none !important
+            .menu-bar-mobile
+                display: flex
+                margin-left: auto
+                justify-content: flex-end
+                align-items: center
+                padding-right: $font-md * 2
+                .option
+                    .hamburger-icon
+                        .line-1, .line-2, .line-3
+                            background-color: $grey
+                            height: 3px
+                            width: 20px
+                            margin-bottom: 3px
+                            border-radius: 3px
+                            transition: all 0.3s ease-in-out
+                .menu-wrapper
+                    position: fixed
+                    left: 0
+                    top: 80px
+                    right: 0
+                    height: 0
+                    overflow: hidden
+                    +ease(fast-slow, 1s)
+                    .menu-container
+                        background-color: white
+                        margin: 0
+                        padding: 0
+                        li
+                            .menu-each
+                                display: block
+                                background-color: $main-pink
+                                cursor: pointer
+                                border-bottom: 1px solid white
+                                .option
+                                    color: white
+                                    padding: $font-md
+                                    font-size: $font-md
+                                &:first-child
+                                    border-top: 1px solid white
+                &.open
+                    .menu-wrapper
+                        height: calc(100vh - 81px)
+                    .option
+                        .hamburger-icon
+                            .line-1
+                                transform: translateY(6px) rotate(45deg)
+                                transform-origin: center center
+                            .line-2
+                                transform: translateX(-100%)
+                                opacity: 0
+                            .line-3
+                                transform: translateY(-6px) rotate(-45deg)
+                                transform-origin: center center
+                
+

@@ -1,0 +1,26 @@
+@import variables
+@import mixins/paddings
+@import mixins/rwd
+@import mixins/ease
+
+header.member-header
+    padding-top: 80px
+    background-color: $main-pink
+    > nav.container
+        ul.member-menu-bar
+            margin-left: 0
+            margin-bottom: 0
+            display: flex
+            li
+                .option
+                    display: block
+                    .name
+                        font-size: $font-sm
+                        +paddings($font-lg)
+                        +ease(default, .5s)
+                        color: white
+                        margin-bottom: 0
+                &:hover
+                    .option
+                        .name
+                            background-color: $dean-pink

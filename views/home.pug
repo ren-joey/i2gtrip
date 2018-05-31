@@ -1,0 +1,390 @@
+extends _layout/global_page
+include _plugins/message.pug
+include _mixins/article-mixins.pug
+
+block head_end
+
+block content
+  // ****START**** only for this page
+  link(rel="stylesheet", href="./css/home.css")
+
+  // jquery-ui 1.12.1
+  link(rel="stylesheet", href="./libraries/jquery-ui.min.css")
+  script(src="./libraries/jquery-ui.min.js")
+
+  // popper.js
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js")
+
+  // slider.js
+  script(src="./js/slider.js")
+
+  // ****END**** only for this page
+  //- +message('all')
+  +search
+  .container.p-T-100
+    .row.pt-4
+      .col-md-3.d-none.d-md-block.min-w-filter
+        .bg-white.p-2.mb-2.box_shadow.position-relative(style='cursor: pointer;')
+          .bg-white.px-3.py-2.border.center 地圖
+          img(src='images/pic_map.jpg', width='100%')
+        .bg-white.box_shadow
+          nav
+            #nav-tab.nav.nav-tabs(role='tablist')
+              a#nav-mb-a-tab.nav-item.nav-link.active.col(data-toggle='tab', href='#nav-mb-a', role='tab', aria-controls='nav-mb-a', aria-selected='true') 常用篩選條件
+              a#nav-mb-b-tab.nav-item.nav-link.col(data-toggle='tab', href='#nav-mb-b', role='tab', aria-controls='nav-mb-b', aria-selected='false') 其他篩選條件
+          #nav-tabContent.tab-content
+            #nav-mb-a.tab-pane.fade.show.active.fz_14(role='tabpanel', aria-labelledby='nav-mb-a-tab')
+              .border-bottom.px-4.pt-3.pb-4
+                div 價錢
+                #amount_price
+                .row.no-gutters.my-3
+                  .col.mr-auto NT$500
+                  .col.text-right NT$20000
+                #slider-range-price
+              .border-bottom.py-2
+                label.label_type(for='usually_2_1')
+                  input#usually_2_1.ml-4(type='checkbox')
+                  span 資料齊全用心房東
+                label.label_type(for='usually_2_2')
+                  input#usually_2_2.ml-4(type='checkbox')
+                  span iLease安全房源
+              .border-bottom.px-4.py-3
+                div 屋種
+                .dropdown.pt-2.pb-3
+                  button#dropdownMenuButton_f_o_1.btn.btn-white.dropdown-toggle.border(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') 電梯大樓 
+                  .dropdown-menu(aria-labelledby='dropdownMenuButton')
+                    a.dropdown-item(href='#') 電梯大樓
+                    a.dropdown-item(href='#') Another action
+                    a.dropdown-item(href='#') Something else here
+                div 房型
+                .dropdown.py-2
+                  button#dropdownMenuButton_f_o_2.btn.btn-white.dropdown-toggle.border(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') 獨立套房 
+                  .dropdown-menu(aria-labelledby='dropdownMenuButton')
+                    a.dropdown-item(href='#') 獨立套房
+                    a.dropdown-item(href='#') Another action
+                    a.dropdown-item(href='#') Something else here
+              .border-bottom.px-4.pt-3.pb-4
+                div 坪數
+                #amount_area
+                .row.no-gutters.my-3
+                  .col.mr-auto 5坪
+                  .col.text-right 48坪
+                #slider-range-area
+              .border-bottom.px-4.py-3
+                div 格局
+                .row.no-gutters.py-3
+                  .pr-3 客廳
+                  #min_a.min_add_btn
+                    i.fa.fa-minus.fa-sm
+                  input#quantity_a.quty_type.mx-2(type='text', value='0', size='3')
+                  #add_a.min_add_btn
+                    i.fa.fa-plus.fa-sm
+                .row.no-gutters.pb-3
+                  .pr-3 廚房
+                  #min_b.min_add_btn
+                    i.fa.fa-minus.fa-sm
+                  input#quantity_b.quty_type.mx-2(type='text', value='0', size='3')
+                  #add_b.min_add_btn
+                    i.fa.fa-plus.fa-sm
+                .row.no-gutters.pb-3
+                  .pr-3 臥室
+                  #min_c.min_add_btn
+                    i.fa.fa-minus.fa-sm
+                  input#quantity_c.quty_type.mx-2(type='text', value='0', size='3')
+                  #add_c.min_add_btn
+                    i.fa.fa-plus.fa-sm
+                .row.no-gutters.pb-3
+                  .pr-3 衛浴
+                  #min_d.min_add_btn
+                    i.fa.fa-minus.fa-sm
+                  input#quantity_d.quty_type.mx-2(type='text', value='0', size='3')
+                  #add_d.min_add_btn
+                    i.fa.fa-plus.fa-sm
+              .px-4.py-3
+                div 旅客評分
+                .row.no-gutters.py-3
+                  .star_box.col-2.mx-auto
+                    img(src='images/icon_star_box_1.png', width='100%')
+                  .star_box.col-2.mx-auto
+                    img(src='images/icon_star_box_2.png', width='100%')
+                  .star_box.col-2.mx-auto
+                    img(src='images/icon_star_box_3.png', width='100%')
+                  .star_box.col-2.mx-auto
+                    img(src='images/icon_star_box_4.png', width='100%')
+                  .star_box.col-2.mx-auto
+                    img(src='images/icon_star_box_5.png', width='100%')
+            #nav-mb-b.tab-pane.fade(role='tabpanel', aria-labelledby='nav-mb-b-tab')
+              #accordion
+                .card
+                  #acd_other_heading_1.card-header
+                    button.btn.btn-link.pl-4(data-toggle='collapse', data-target='#acd_other_collapse_1', aria-expanded='true', aria-controls='acd_other_collapse_1')
+                      i.fa.fa-md.pr-3(aria-hidden='true')
+                      | 基礎設施
+                  #acd_other_collapse_1.collapse.show(aria-labelledby='acd_other_heading_1', data-parent='#accordion')
+                    .card-body.row.no-gutters
+                      label.label_type_icon(for='other_1_1')
+                        img.px-3.py-2(src='images/icon_filter_desk.png', width='100%')
+                        div 全選
+                        div
+                          input#other_1_1(type='checkbox')
+                      label.label_type_icon(for='other_1_2')
+                        img.px-3.py-2(src='images/icon_filter_desk.png', width='100%')
+                        div 全選
+                        div
+                          input#other_1_2(type='checkbox')
+                      label.label_type_icon(for='other_1_3')
+                        img.px-3.py-2(src='images/icon_filter_desk.png', width='100%')
+                        div 全選
+                        div
+                          input#other_1_3(type='checkbox')
+                      label.label_type_icon(for='other_1_4')
+                        img.px-3.py-2(src='images/icon_filter_desk.png', width='100%')
+                        div 全選
+                        div
+                          input#other_1_4(type='checkbox')
+                      label.label_type_icon(for='other_1_5')
+                        img.px-3.py-2(src='images/icon_filter_desk.png', width='100%')
+                        div 全選
+                        div
+                          input#other_1_5(type='checkbox')
+                      label.label_type_icon(for='other_1_6')
+                        img.px-3.py-2(src='images/icon_filter_desk.png', width='100%')
+                        div 全選
+                        div
+                          input#other_1_6(type='checkbox')
+                .card
+                  #acd_other_heading_2.card-header
+                    button.btn.btn-link.pl-4.collapsed(data-toggle='collapse', data-target='#acd_other_collapse_2', aria-expanded='true', aria-controls='acd_other_collapse_2')
+                      i.fa.fa-md.pr-3(aria-hidden='true')
+                      | 進階設施
+                  #acd_other_collapse_2.collapse(aria-labelledby='acd_other_heading_2', data-parent='#accordion')
+                    .card-body.row.no-gutters
+                      label.label_type_icon(for='other_2_1')
+                        img.px-3.py-2(src='images/icon_filter_desk.png', width='100%')
+                        div 全選
+                        div
+                          input#other_2_1(type='checkbox')
+                      label.label_type_icon(for='other_2_2')
+                        img.px-3.py-2(src='images/icon_filter_desk.png', width='100%')
+                        div 全選
+                        div
+                          input#other_2_2(type='checkbox')
+                      label.label_type_icon(for='other_2_3')
+                        img.px-3.py-2(src='images/icon_filter_desk.png', width='100%')
+                        div 全選
+                        div
+                          input#other_2_3(type='checkbox')
+                      label.label_type_icon(for='other_2_4')
+                        img.px-3.py-2(src='images/icon_filter_desk.png', width='100%')
+                        div 全選
+                        div
+                          input#other_2_4(type='checkbox')
+                      label.label_type_icon(for='other_2_5')
+                        img.px-3.py-2(src='images/icon_filter_desk.png', width='100%')
+                        div 全選
+                        div
+                          input#other_2_5(type='checkbox')
+                      label.label_type_icon(for='other_2_6')
+                        img.px-3.py-2(src='images/icon_filter_desk.png', width='100%')
+                        div 全選
+                        div
+                          input#other_2_6(type='checkbox')
+                .card
+                  #acd_other_heading_3.card-header
+                    button.btn.btn-link.pl-4.collapsed(data-toggle='collapse', data-target='#acd_other_collapse_3', aria-expanded='false', aria-controls='acd_other_collapse_3')
+                      i.fa.fa-md.pr-3(aria-hidden='true')
+                      | 鄉鎮選擇
+                  #acd_other_collapse_3.collapse(aria-labelledby='acd_other_heading_3', data-parent='#accordion')
+                    .card-body
+                      label.label_type(for='other_3_1')
+                        input#other_3_1.form-check-input(type='checkbox')
+                        span 西屯區
+                      label.label_type(for='other_3_2')
+                        input#other_3_2.form-check-input(type='checkbox')
+                        span 西屯區
+                .card
+                  #acd_other_heading_4.card-header
+                    button.btn.btn-link.pl-4.collapsed(data-toggle='collapse', data-target='#acd_other_collapse_4', aria-expanded='false', aria-controls='acd_other_collapse_4')
+                      i.fa.fa-md.pr-3(aria-hidden='true')
+                      | 學校選擇
+                  #acd_other_collapse_4.collapse(aria-labelledby='acd_other_heading_4', data-parent='#accordion')
+                    .card-body
+                      label.label_type(for='other_4_1')
+                        input#other_4_1.form-check-input(type='checkbox')
+                        span 中山醫學大學
+                      label.label_type(for='other_4_2')
+                        input#other_4_2.form-check-input(type='checkbox')
+                        span 中興大學
+                .card
+                  #acd_other_heading_5.card-header
+                    button.btn.btn-link.pl-4.collapsed(data-toggle='collapse', data-target='#acd_other_collapse_5', aria-expanded='false', aria-controls='acd_other_collapse_5')
+                      i.fa.fa-md.pr-3(aria-hidden='true')
+                      | 商圈選擇
+                  #acd_other_collapse_5.collapse(aria-labelledby='acd_other_heading_5', data-parent='#accordion')
+                    .card-body
+                      label.label_type(for='other_5_1')
+                        input#other_5_1.form-check-input(type='checkbox')
+                        span 精明一街商圈
+                      label.label_type(for='other_5_2')
+                        input#other_5_2.form-check-input(type='checkbox')
+                        span 台中電子街商圈
+                .card
+                  #acd_other_heading_6.card-header
+                    button.btn.btn-link.pl-4.collapsed(data-toggle='collapse', data-target='#acd_other_collapse_6', aria-expanded='false', aria-controls='acd_other_collapse_6')
+                      i.fa.fa-md.pr-3(aria-hidden='true')
+                      | 房源朝向
+                  #acd_other_collapse_6.collapse(aria-labelledby='acd_other_heading_6', data-parent='#accordion')
+                    .card-body
+                      label.label_type(for='other_6_1')
+                        input#other_6_1.form-check-input(type='checkbox')
+                        span 坐北朝南
+                      label.label_type(for='other_6_2')
+                        input#other_6_2.form-check-input(type='checkbox')
+                        span 坐南朝北
+                .card
+                  #acd_other_heading_7.card-header
+                    button.btn.btn-link.pl-4.collapsed(data-toggle='collapse', data-target='#acd_other_collapse_7', aria-expanded='false', aria-controls='acd_other_collapse_7')
+                      i.fa.fa-md.pr-3(aria-hidden='true')
+                      | 法定用途
+                  #acd_other_collapse_7.collapse(aria-labelledby='acd_other_heading_7', data-parent='#accordion')
+                    .card-body
+                      label.label_type(for='other_7_1')
+                        input#other_7_1.form-check-input(type='checkbox')
+                        span 自用住宅
+                      label.label_type(for='other_7_2')
+                        input#other_7_2.form-check-input(type='checkbox')
+                        span 營業用途
+                .card
+                  #acd_other_heading_8.card-header
+                    button.btn.btn-link.pl-4.collapsed(data-toggle='collapse', data-target='#acd_other_collapse_8', aria-expanded='false', aria-controls='acd_other_collapse_8')
+                      i.fa.fa-md.pr-3(aria-hidden='true')
+                      | 最短租約
+                  #acd_other_collapse_8.collapse(aria-labelledby='acd_other_heading_8', data-parent='#accordion')
+                    .card-body
+                      label.label_type(for='other_8_1')
+                        input#other_8_1.form-check-input(type='checkbox')
+                        span 半年
+                      label.label_type(for='other_8_2')
+                        input#other_8_2.form-check-input(type='checkbox')
+                        span 一年
+                .card
+                  #acd_other_heading_9.card-header
+                    button.btn.btn-link.pl-4.collapsed(data-toggle='collapse', data-target='#acd_other_collapse_9', aria-expanded='false', aria-controls='acd_other_collapse_9')
+                      i.fa.fa-md.pr-3(aria-hidden='true')
+                      | 性別限制
+                  #acd_other_collapse_9.collapse(aria-labelledby='acd_other_heading_9', data-parent='#accordion')
+                    .card-body
+                      label.label_type(for='other_9_1')
+                        input#other_9_1.form-check-input(type='checkbox')
+                        span 男性
+                      label.label_type(for='other_9_2')
+                        input#other_9_2.form-check-input(type='checkbox')
+                        span 女性
+                .card
+                  #acd_other_heading_10.card-header
+                    button.btn.btn-link.pl-4.collapsed(data-toggle='collapse', data-target='#acd_other_collapse_10', aria-expanded='false', aria-controls='acd_other_collapse_10')
+                      i.fa.fa-md.pr-3(aria-hidden='true')
+                      | 其他選項
+                  #acd_other_collapse_10.collapse(aria-labelledby='acd_other_heading_10', data-parent='#accordion')
+                    .card-body
+                      label.label_type(for='other_10_1')
+                        input#other_10_1.form-check-input(type='checkbox')
+                        span 管理費
+                      label.label_type(for='other_10_2')
+                        input#other_10_2.form-check-input(type='checkbox')
+                        span 可以開伙
+      .col-md-9.col-sm-12.mx-auto
+        .row
+          .col-md-6.col-sm-12.mb-5
+            .icon_like  
+            .icon_crown  
+            .icon_shield  
+            #carouselExampleIndicators.carousel.slide(data-ride='carousel', data-interval='false')
+              ol.carousel-indicators
+                li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
+                li(data-target='#carouselExampleIndicators', data-slide-to='1')
+                li(data-target='#carouselExampleIndicators', data-slide-to='2')
+              .carousel-inner.radius_10
+                .carousel-item.active
+                  img.d-block.w-100(src='images/portal_01.jpg', alt='First slide')
+                .carousel-item
+                  img.d-block.w-100(src='images/portal_01.jpg', alt='Second slide')
+                .carousel-item
+                  img.d-block.w-100(src='images/portal_01.jpg', alt='Third slide')
+              a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
+                span(aria-hidden='true')
+                  img(src='images/chevron-left.png', width='30vmin')
+                span.sr-only Previous
+              a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
+                span(aria-hidden='true')
+                  img(src='images/chevron-right.png', width='30vmin')
+                span.sr-only Next
+            a.d-block(href="./estate")
+              .pt-2.text 電梯大樓·獨立套房
+              .pt-1.text 全新時尚百萬裝潢★走路中科大★24H管理
+              .pt-1.text ＄5,999元/月
+              .pt-1.text
+                img(src='images/icon_star_5.png', height='15px', style='margin-top: -5px;')
+                |  iLease安全房源・用心房東
+          .col-md-6.col-sm-12.mb-5
+            .icon_like  
+            .icon_crown  
+            .icon_shield  
+            #carouselExampleIndicators2.carousel.slide(data-ride='carousel', data-interval='false')
+              ol.carousel-indicators
+                li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
+                li(data-target='#carouselExampleIndicators', data-slide-to='1')
+                li(data-target='#carouselExampleIndicators', data-slide-to='2')
+              .carousel-inner.radius_10
+                .carousel-item.active
+                  img.d-block.w-100(src='images/portal_01.jpg', alt='First slide')
+                .carousel-item
+                  img.d-block.w-100(src='images/portal_01.jpg', alt='Second slide')
+                .carousel-item
+                  img.d-block.w-100(src='images/portal_01.jpg', alt='Third slide')
+              a.carousel-control-prev(href='#carouselExampleIndicators2', role='button', data-slide='prev')
+                span(aria-hidden='true')
+                  img(src='images/chevron-left.png', width='30vmin')
+                span.sr-only Previous
+              a.carousel-control-next(href='#carouselExampleIndicators2', role='button', data-slide='next')
+                span(aria-hidden='true')
+                  img(src='images/chevron-right.png', width='30vmin')
+                span.sr-only Next
+            a.d-block(href="./estate")
+              .pt-2.text 電梯大樓·獨立套房
+              .pt-1.text 全新時尚百萬裝潢★走路中科大★24H管理
+              .pt-1.text ＄5,999元/月
+              .pt-1.text
+                img(src='images/icon_star_5.png', height='15px', style='margin-top: -5px;')
+                |  iLease安全房源・用心房東
+          .col-md-6.col-sm-12.mb-5
+            .icon_like  
+            .icon_crown  
+            .icon_shield  
+            #carouselExampleIndicators3.carousel.slide(data-ride='carousel', data-interval='false')
+              ol.carousel-indicators
+                li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
+                li(data-target='#carouselExampleIndicators', data-slide-to='1')
+                li(data-target='#carouselExampleIndicators', data-slide-to='2')
+              .carousel-inner.radius_10
+                .carousel-item.active
+                  img.d-block.w-100(src='images/portal_01.jpg', alt='First slide')
+                .carousel-item
+                  img.d-block.w-100(src='images/portal_01.jpg', alt='Second slide')
+                .carousel-item
+                  img.d-block.w-100(src='images/portal_01.jpg', alt='Third slide')
+              a.carousel-control-prev(href='#carouselExampleIndicators3', role='button', data-slide='prev')
+                span(aria-hidden='true')
+                  img(src='images/chevron-left.png', width='30vmin')
+                span.sr-only Previous
+              a.carousel-control-next(href='#carouselExampleIndicators3', role='button', data-slide='next')
+                span(aria-hidden='true')
+                  img(src='images/chevron-right.png', width='30vmin')
+                span.sr-only Next
+            a.d-block(href="./estate")
+              .pt-2.text 電梯大樓·獨立套房
+              .pt-1.text 全新時尚百萬裝潢★走路中科大★24H管理
+              .pt-1.text ＄5,999元/月
+              .pt-1.text
+                img(src='images/icon_star_5.png', height='15px', style='margin-top: -5px;')
+                |  iLease安全房源・用心房東

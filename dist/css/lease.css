@@ -1,0 +1,41 @@
+.full-ad {
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover; }
+  .full-ad > .row {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0; }
+    .full-ad > .row [class^='col'] {
+      position: relative; }
+      .full-ad > .row [class^='col'] .ad-container {
+        position: absolute;
+        top: -webkit-calc( 50% + 100px);
+        top: calc( 50% + 100px);
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+            -ms-flex-align: start;
+                align-items: flex-start; }
+        .full-ad > .row [class^='col'] .ad-container > div {
+          margin-bottom: 2rem;
+          max-width: 400px;
+          text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); }
+        .full-ad > .row [class^='col'] .ad-container > .title {
+          font-size: 1.6rem;
+          color: white; }
+        .full-ad > .row [class^='col'] .ad-container > .content {
+          font-size: 1rem;
+          color: white; }
+        .full-ad > .row [class^='col'] .ad-container > .control-bar {
+          white-space: nowrap;
+          padding: 1rem; }

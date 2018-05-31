@@ -1,0 +1,32 @@
+extends _layout/global_page
+include _plugins/message.pug
+include _mixins/article-mixins.pug
+
+block head_end
+
+block content
+    // ****START**** only for this page
+    link(rel="stylesheet", href="./css/form.css")
+
+    link(rel="stylesheet", href="./css/signup-pass.css")
+    //- script(src="./js/login.js")
+    // ****END**** only for this page
+    //- +message('all')
+    .register-wrapper
+        form.main-form.register
+            .register-head
+                .register-tab 註冊成功！
+            .register-content
+                .input-box
+                    .register-img
+                        img(src="./images/register-done.png", alt="")
+                .input-box
+                    .title
+                        | 歡迎您加入愛豬！
+                    .content
+                        | 提醒您都入後請至【帳戶管理】輸入完整資訊，以利您使用愛豬出租網的完整服務哦！
+                .input-box
+                    a.next-btn(href="member") 開始使用
+
+
+

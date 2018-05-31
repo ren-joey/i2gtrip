@@ -1,0 +1,29 @@
+{
+  "name": "i2gtrip",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "bower": "^1.8.4",
+    "browser-sync": "^2.24.4",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp": "^3.9.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/tsuyiren/i2gtrip.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/tsuyiren/i2gtrip/issues"
+  },
+  "homepage": "https://gitlab.com/tsuyiren/i2gtrip#README"
+}

@@ -1,0 +1,48 @@
+.widget {
+  border: 1px solid #CCCCCC;
+  margin-bottom: 20px; }
+  .widget .title {
+    color: #686868;
+    background-color: #CCCCCC;
+    border: 1px solid;
+    font-size: 1rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem; }
+  .widget .user-img > img {
+    width: 100%; }
+
+.menu-container {
+  position: relative;
+  font-size: 1.2rem;
+  padding-top: 160px;
+  background-color: #C88387;
+  height: 80px;
+  width: auto;
+  color: #000000; }
+  .menu-container ul {
+    position: absolute;
+    top: 110px;
+    left: 100px;
+    color: #FFFFFF; }
+    .menu-container ul li {
+      color: #FFFFFF;
+      font-size: 20px;
+      display: inline;
+      margin: 10px; }
+
+.panel-default {
+  width: 70%;
+  margin: auto;
+  border: 1px solid; }
+
+#div_user_photo {
+  position: relative; }
+
+.connected, .panel-body {
+  font-size: 16px; }
+
+#basic-info, #connected-account {
+  text-align: right;
+  padding-right: 30px; }

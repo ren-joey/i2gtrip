@@ -1,0 +1,212 @@
+@import variables
+@import mixins/paddings
+@import mixins/ease
+
+body
+    font-family: Meiryo, "微軟正黑體", "Microsoft JhengHei", Verdana, Arial, sans-serif
+    font-size: 16px
+    overflow-x: hidden    
+
+li
+    list-style-type: none
+
+h1#SEO-title, h2#SEO-title
+    display: none
+
+h1, h2, h3, h4
+    font-weight: normal
+
+a
+    text-decoration: none !important
+    // color: inherit
+    &:visited, &:focus, &:active, &:hover, &:link
+        text-decoration: none !important
+    &:link
+        // color: inherit
+
+.font-black
+    color: black
+
+.d-ib
+    display: inline-block
+
+.d-flex
+    display: flex
+    &.d-column
+        flex-direction: column
+    &.d-wrap
+        flex-wrap: wrap
+    &.d-center
+        justify-content: center
+        align-items: center
+    &.d-start
+        justify-content: flex-start
+        align-items: flex-start
+    &.d-end
+        justify-content: flex-end
+        align-items: flex-end
+
+.box
+    margin: 2rem
+    > .title
+        font-size: $font-lg
+        margin-bottom: 2rem
+        color: $grey
+    > .content
+        font-size: $font-md
+        margin-bottom: 2rem
+        color: $grey
+    > .text
+        font-size: $font-xs
+        margin-bottom: 2rem
+        color: $grey
+    > .num
+        font-size: $font-xl
+        color: $main-pink
+    &.sm-box
+        margin: .85rem
+    &.center-box
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+
+
+.d-block
+    display: block
+
+.center-col
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+.send-btn
+    background-color: $main-pink
+    color: white
+    font-size: $font-lg
+    cursor: pointer
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, .5)
+    +paddings($font-lg)
+    +ease(default, 1s)
+    &:hover, &:active, &:visited
+        color: white
+        background-color: $dean-pink
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, .7)
+    &.primary
+        background-color: $main-blue
+    &.length
+        padding-left: $font-xl
+        padding-right: $font-xl
+        
+
+.pointer
+    cursor: pointer
+
+.fz_14
+    font-size: 14px
+
+.fz_vm_lg
+    font-size: 6vmin
+    line-height: 5vmin
+
+.fz_vm_md
+    font-size: 2.5vmin
+    line-height: 3.5vmin
+
+.fz_vm_sm
+    font-size: 2vmin
+    line-height: 3.5vmin
+
+
+.fz_vm_xs
+    font-size: 1.5vmin
+    line-height: 3vmin
+
+.min_w
+    min-width: 540px
+
+.text_pink
+    color: #FF848B
+
+.text_grey
+    color: #E6E6E6
+
+.text_dp_grey
+    color: #C1C1C1
+
+.bg_pink
+    background-color: #FF848B
+
+.bg_grey
+    background-color: #E6E6E6
+
+
+.middle
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+
+.radius_5
+    border-radius: 5px
+
+.radius_10
+    border-radius: 10px
+
+.radius_all
+    border-radius: 100%
+
+.center
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.box_shadow
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,0.4)
+
+.text_shadow
+    text-shadow: rgb(0, 0, 0) 4px 3px 9px
+
+.btn_lg_pink
+    font-size: 2vmin
+    line-height: 3.5vmin
+    letter-spacing: 0.2vmin
+    color: #FFFFFF
+    text-align: center
+    width: 20vmin
+    padding: 1.5vmin 0
+    background-color: #FF848B
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,0.4)
+    cursor: pointer
+
+.btn_lg_pink:hover
+    background-color: #C1C1C1
+
+.circle_box
+    width: 20px
+    height: 20px
+    font-size: 14px
+    line-height: 20px
+    text-align: center
+    border-radius: 100%
+    transform: translate(-5px,5px)
+    border: #C1C1C1 1px solid
+
+.p-T-50
+    padding-top: 50px
+.p-T-100
+    padding-top: 100px
+.p-T-150
+    padding-top: 150px
+.p-T-200
+    padding-top: 200px
+
+.m-T-50
+    margin-top: 50px
+.m-T-100
+    margin-top: 100px
+.m-T-150
+    margin-top: 150px
+.m-T-200
+    margin-top: 200px

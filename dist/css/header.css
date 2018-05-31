@@ -1,0 +1,147 @@
+header#i2gtrip {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: white;
+  z-index: 10; }
+  header#i2gtrip > .header-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    header#i2gtrip > .header-container .brand {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      padding-left: 3rem;
+      padding-right: 3rem; }
+      header#i2gtrip > .header-container .brand > h1 {
+        display: none; }
+    header#i2gtrip > .header-container .menu-bar-mobile {
+      display: none; }
+    header#i2gtrip > .header-container .menu-bar {
+      margin-left: auto;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding-right: 2.4rem;
+      margin-bottom: 0; }
+      header#i2gtrip > .header-container .menu-bar li {
+        display: block; }
+        header#i2gtrip > .header-container .menu-bar li .option {
+          display: block; }
+          header#i2gtrip > .header-container .menu-bar li .option .name {
+            font-size: 1.2rem;
+            color: #686868;
+            cursor: pointer;
+            white-space: nowrap;
+            padding-top: 0.6rem;
+            padding-bottom: 0.6rem;
+            padding-left: 1.2rem;
+            padding-right: 1.2rem;
+            -webkit-transition: 0.5s all cubic-bezier(0.18, 0.8, 0.5, 0.93);
+            -o-transition: 0.5s all cubic-bezier(0.18, 0.8, 0.5, 0.93);
+            transition: 0.5s all cubic-bezier(0.18, 0.8, 0.5, 0.93); }
+          header#i2gtrip > .header-container .menu-bar li .option:hover .name {
+            color: #999999; }
+    @media only screen and (max-width: 800px) {
+      header#i2gtrip > .header-container .brand {
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+        -webkit-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+                transform: scale(0.8); }
+      header#i2gtrip > .header-container .menu-bar {
+        padding-right: 2rem; }
+        header#i2gtrip > .header-container .menu-bar li .option .name {
+          font-size: 1rem;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+          padding-left: 1rem;
+          padding-right: 1rem; } }
+    @media only screen and (max-width: 670px) {
+      header#i2gtrip > .header-container .menu-bar {
+        display: none !important; }
+      header#i2gtrip > .header-container .menu-bar-mobile {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        margin-left: auto;
+        -webkit-box-pack: end;
+        -webkit-justify-content: flex-end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding-right: 2.4rem; }
+        header#i2gtrip > .header-container .menu-bar-mobile .option .hamburger-icon .line-1, header#i2gtrip > .header-container .menu-bar-mobile .option .hamburger-icon .line-2, header#i2gtrip > .header-container .menu-bar-mobile .option .hamburger-icon .line-3 {
+          background-color: #686868;
+          height: 3px;
+          width: 20px;
+          margin-bottom: 3px;
+          -webkit-border-radius: 3px;
+                  border-radius: 3px;
+          -webkit-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out; }
+        header#i2gtrip > .header-container .menu-bar-mobile .menu-wrapper {
+          position: fixed;
+          left: 0;
+          top: 80px;
+          right: 0;
+          height: 0;
+          overflow: hidden;
+          -webkit-transition: 1s all cubic-bezier(0.13, 0.72, 0.69, 0.98);
+          -o-transition: 1s all cubic-bezier(0.13, 0.72, 0.69, 0.98);
+          transition: 1s all cubic-bezier(0.13, 0.72, 0.69, 0.98); }
+          header#i2gtrip > .header-container .menu-bar-mobile .menu-wrapper .menu-container {
+            background-color: white;
+            margin: 0;
+            padding: 0; }
+            header#i2gtrip > .header-container .menu-bar-mobile .menu-wrapper .menu-container li .menu-each {
+              display: block;
+              background-color: #FF848B;
+              cursor: pointer;
+              border-bottom: 1px solid white; }
+              header#i2gtrip > .header-container .menu-bar-mobile .menu-wrapper .menu-container li .menu-each .option {
+                color: white;
+                padding: 1.2rem;
+                font-size: 1.2rem; }
+              header#i2gtrip > .header-container .menu-bar-mobile .menu-wrapper .menu-container li .menu-each:first-child {
+                border-top: 1px solid white; }
+        header#i2gtrip > .header-container .menu-bar-mobile.open .menu-wrapper {
+          height: -webkit-calc(100vh - 81px);
+          height: calc(100vh - 81px); }
+        header#i2gtrip > .header-container .menu-bar-mobile.open .option .hamburger-icon .line-1 {
+          -webkit-transform: translateY(6px) rotate(45deg);
+              -ms-transform: translateY(6px) rotate(45deg);
+                  transform: translateY(6px) rotate(45deg);
+          -webkit-transform-origin: center center;
+              -ms-transform-origin: center center;
+                  transform-origin: center center; }
+        header#i2gtrip > .header-container .menu-bar-mobile.open .option .hamburger-icon .line-2 {
+          -webkit-transform: translateX(-100%);
+              -ms-transform: translateX(-100%);
+                  transform: translateX(-100%);
+          opacity: 0; }
+        header#i2gtrip > .header-container .menu-bar-mobile.open .option .hamburger-icon .line-3 {
+          -webkit-transform: translateY(-6px) rotate(-45deg);
+              -ms-transform: translateY(-6px) rotate(-45deg);
+                  transform: translateY(-6px) rotate(-45deg);
+          -webkit-transform-origin: center center;
+              -ms-transform-origin: center center;
+                  transform-origin: center center; } }

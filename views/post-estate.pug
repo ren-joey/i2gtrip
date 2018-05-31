@@ -1,0 +1,81 @@
+extends _layout/global_page
+include _plugins/message.pug
+
+block head_end
+
+block content
+    // ****START**** only for this page
+    link(rel="stylesheet", href="./css/form.css")
+
+    // datepicker 2.0
+    link(rel="stylesheet", href="./libraries/datepicker/datepicker.css")
+    script(src="./libraries/datepicker/datepicker.js")
+    // ****END**** only for this page
+    //- +message('all')
+    .container.p-T-150
+        .steps
+            .step-each
+                .num 1
+                .title 刊登房源
+            .step-each
+                .num 2
+                .title 房源資訊
+            .step-each
+                .num 3
+                .title 基本資料
+            .step-each
+                .num 4
+                .title 資料認證
+            .step-now
+                .step-each
+                    .num 1
+                    .title 刊登房源
+        form.main-form.m-T-50
+            .each-list
+                .title 請問您是？
+                .input-box
+                    input#test1(type='radio', name='radio-group', checked='')
+                    label(for='test1') 房東本人
+                    input#test2(type='radio', name='radio-group')
+                    label(for='test2') 代理人
+                    input#test3(type='radio', name='radio-group')
+                    label(for='test3') 房屋仲介
+            hr
+            .each-list
+                .title 可遷入日期
+                .input-box
+                    input.datepicker(type="text" placeholder="請選擇日期")
+            hr
+            .each-list
+                .title 房源地址
+                .input-box
+                    select
+                        option 縣市
+                    select
+                        option 地區
+                    input(type="text" placeholder="道路或街名或村里名稱")
+                    input.input-sm(type="text")
+                    | 巷  
+                    input.input-sm(type="text")
+                    | 弄  
+                    input.input-sm(type="text")
+                    | 號之  
+                    input.input-sm(type="text")
+                    | 樓之  
+                    input.input-sm(type="text")
+                    | 室
+                    .comment
+                        | 此為隱私資訊，我們只會將您的具體地址分享給已確認預訂的房客。
+            .each-list
+                a.next-btn(href="post-estate-step2") 下一步
+
+                    
+
+    
+            
+
+            
+
+
+
+    

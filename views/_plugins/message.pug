@@ -1,0 +1,37 @@
+mixin message(rule)
+    link(rel="stylesheet", href="./css/message.css")
+    #MSG.message(class = rule)
+        if rule == 'all'
+            #CP.chat-pig.show
+                img(src="./images/svg/chat-pig-bubble.svg", alt="")
+        else
+            #CP.chat-pig
+                img(src="./images/svg/chat-pig-bubble.svg", alt="")
+        .chat-container
+            .chat-menu
+                .chat-option
+                    .chat-header-bar
+                        #MSGX.chat-header-option
+                            .icon-mac-cancel
+                        .chat-header-option
+                            .icon-mac-min
+                        .chat-header-option
+                            .icon-mac-resize
+                .chat-option
+                    .icon-logo-sm
+                    .name 客服聊聊豬
+                .chat-option
+                    .icon-chat-bubble
+                    .name 訊息記錄
+                .chat-option
+                    .icon-user
+                    .name 聯絡人
+                .chat-option
+                    .icon-speaker
+                    .name 動態通知
+                .chat-option
+                    .icon-calendar
+                    .name 行事曆
+            .chat-room
+    script(src="./js/message.js")
+    

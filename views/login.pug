@@ -1,0 +1,73 @@
+extends _layout/global_page
+include _plugins/message.pug
+include _mixins/article-mixins.pug
+
+block head_end
+
+block content
+    // ****START**** only for this page
+    link(rel="stylesheet", href="./css/form.css")
+
+    link(rel="stylesheet", href="./css/login.css")
+    script(src="./js/login.js")
+    // ****END**** only for this page
+    //- +message('all')
+    #LW.login-wrapper.tab1
+        form.main-form.login
+            .login-switch
+                .login-tab.active 登入
+                .register-tab(onclick="switchTo(2)") 註冊
+            .login-content
+                .input-box
+                    input#loginUserEmail.input-lg.light-border(type="text" placeholder="電子郵件")
+                .input-box
+                    input#loginPassword.input-lg.light-border(type="password" placeholder="密碼")
+                .input-box
+                    input#rememberMe(type="checkbox")
+                    label(for="rememberMe") 保持登入狀態
+                .input-box
+                    a.next-btn(href="desktop") 登入
+                .input-box
+                    a.forget-btn(href="reset-password") 忘記密碼嗎？
+                .login-social
+                    .title 快速登入
+                    .input-box
+                        .next-btn.google 以Google+登入
+                            .fa.fa-google
+                    .input-box
+                        .next-btn.facebook 以Facebook登入
+                            .fa.fa-facebook
+                    .input-box
+                        .next-btn.wechat 以WeChat微信登入
+                            .fa.fa-wechat
+        form.main-form.register
+            .login-switch
+                .login-tab.register-tab(onclick="switchTo(1)") 登入
+                .register-tab.active 註冊
+            .login-content
+                .input-box.d-flex
+                    input#lastName.input-lg.light-border(type="text" placeholder="姓氏")
+                    input#firstName.input-lg.light-border(type="text" placeholder="名字")
+                .input-box
+                    input#registerUserEmail.input-lg.light-border(type="text" placeholder="電子郵件")
+                .input-box
+                    input#registerPassword.input-lg.light-border(type="password" placeholder="密碼")
+                .input-box
+                    input#rememberMe(type="checkbox")
+                    label(for="rememberMe") 保持登入狀態
+                .input-box
+                    a.next-btn(href="signup-pass") 註冊
+                .login-social
+                    .title 快速登入
+                    .input-box
+                        .next-btn.google 以Google+登入
+                            .fa.fa-google
+                    .input-box
+                        .next-btn.facebook 以Facebook登入
+                            .fa.fa-facebook
+                    .input-box
+                        .next-btn.wechat 以WeChat微信登入
+                            .fa.fa-wechat
+
+
+

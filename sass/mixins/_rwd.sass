@@ -1,0 +1,48 @@
+@mixin breakpoint($point)
+	@if $point == desktop
+		@media only screen and (min-width: 1500px)
+			@content
+
+	@if $point == zone-wide
+		@media only screen and (max-width: 1599px)
+			@content
+
+	@if $point == zone-base
+		@media only screen and (max-device-width: 1179px)
+			@content
+
+	@if $point == pad-landscape
+		@media only screen and (max-device-width: 1024px)
+			@content
+
+	@if $point == pad-portrait
+		@media only screen and (max-width: 800px)
+			@content
+
+	@if $point == tablet
+		@media only screen and (max-width: 670px)
+			@content
+
+	@if $point == mobile
+		@media only screen and (max-width: 420px)
+			@content
+
+	@if $point == xs
+		@media (max-width: 575.98px)
+			@content
+
+	@if $point == sm
+		@media (max-width: 767.98px)
+			@content
+
+	@if $point == md
+		@media (max-width: 991.98px)
+			@content
+
+	@if $point == lg
+		@media (max-width: 1199.98px)
+			@content
+
+	@if $point == xl
+		@media (min-width: 1200px)
+			@content

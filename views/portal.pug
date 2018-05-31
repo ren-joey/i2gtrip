@@ -1,0 +1,75 @@
+extends _layout/global_page
+include _plugins/message.pug
+include _mixins/article-mixins.pug
+
+block head_end
+
+block content
+  // ****START**** only for this page
+  link(rel="stylesheet", href="./css/portal.css")
+
+  // jquery-ui 1.12.1
+  link(rel="stylesheet", href="./libraries/jquery-ui.min.css")
+  script(src="./libraries/jquery-ui.min.js")
+  // ****END**** only for this page
+  //- +message('all')
+  +search
+  .container.min_w.p-T-100
+    .mb-3.h5 你需要什麼?
+    .row.mx-auto.no-gutters.h5
+      a.col-md-3.col-sm-12.mr-4.row.no-gutters.bg-white.box_shadow.mb-3(href="./home")
+        .col-7
+          img(src='./images/portal_01.jpg', width='100%')
+        .col-5.bg-white.text-center.my-auto.font-black 長期租屋
+      .col-md-3.col-sm-12.mr-4.row.no-gutters.bg-white.box_shadow.mb-3
+        .col-7
+          img(src='./images/portal_01.jpg', width='100%')
+        .col-5.bg-white.text-center.my-auto 短租旅遊
+      .col-md-3.col-sm-12.mr-4.row.no-gutters.bg-white.box_shadow.mb-3
+        .col-7
+          img(src='./images/portal_01.jpg', width='100%')
+        .col-5.bg-white.text-center.my-auto 房屋買賣
+    .my-3.h5 用心推出 iLease安全房源
+    div(clas='col-12')
+      a.hover_container.box-shadow(href="./home")
+        img.hover_image(src='./images/por_pic_1.jpg', alt='Avatar')
+        .hover_pic_text 採用iLease電子門鎖的安全房源。
+        .hover_middle
+          .hover_text 查看 iLease安全房源
+    .mt-5.row
+      .col-md-6.col-sm-12.mb-5
+        .row.no-gutters
+          .text-danger.h1 01
+          .ml-3.my-auto.border-bottom.border-dark.h5 最方便的租屋！想租就租！
+        .row.no-gutters
+          .bg-danger.text-white.h5.p-5.my-auto.line_h30.radius_10 無論你是學生、家庭、商務出差，還是打工度假、自助旅行甚至是家族旅遊，在這裡可以隨時找到最適合的房子！
+      .col-md-6.col-sm-12.mb-5
+        .row.no-gutters
+          .text-danger.h1 02
+          .ml-3.my-auto.border-bottom.border-dark.h5 即時聯繫，多方整合！
+        .row.no-gutters
+          .bg-danger.text-white.h5.p-5.my-auto.line_h30.radius_10 不想一通一通電話預約看房嗎？不想再找不到房東協助修繕了嗎？愛豬網的多方整合服務，提供最方便的使用者體驗。
+      .col-md-6.col-sm-12.mb-5
+        .row.no-gutters
+          .text-danger.h1 03
+          .ml-3.my-auto.border-bottom.border-dark.h5 快速訂房！線上即時預約看房
+        .row.no-gutters
+          .bg-danger.text-white.h5.p-5.my-auto.line_h30.radius_10 內建即時通訊系統，輸入即可預約看房，並整合行事曆與GOOGLE MAP，讓您不再擔心錯過預約！
+      .col-md-6.col-sm-12.mb-5
+        .row.no-gutters
+          .text-danger.h1 04
+          .ml-3.my-auto.border-bottom.border-dark.h5 客服聊聊豬小助手隨時回覆
+        .row.no-gutters
+          .bg-danger.text-white.h5.p-5.my-auto.line_h30.radius_10 怎麼預約看房？我有問題怎麼辦？內建客服聊聊豬，不分日夜24小時即時在線服務，隨時回覆您的任何疑惑！
+      .col-md-6.col-sm-12.mb-5
+        .row.no-gutters
+          .text-danger.h1 05
+          .ml-3.my-auto.border-bottom.border-dark.h5 資料雲端留存，不怕找不到
+        .row.no-gutters
+          .bg-danger.text-white.h5.p-5.my-auto.line_h30.radius_10 租了好幾年，每次都找不到合約丟到哪裡？到底有哪些房客規定？雲端留存合約書，再也不怕不清楚！
+      .col-md-6.col-sm-12.mb-5
+        .row.no-gutters
+          .text-danger.h1 06
+          .ml-3.my-auto.border-bottom.border-dark.h5 修繕即時服務
+        .row.no-gutters
+          .bg-danger.text-white.h5.p-5.my-auto.line_h30.radius_10 每次房間有問題，又找不到房仲了？房東遠在國外，到底該怎麼辦？即時預約修繕，我們都幫您處理到好！

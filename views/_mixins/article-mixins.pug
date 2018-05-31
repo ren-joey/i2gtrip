@@ -1,0 +1,53 @@
+mixin search
+    link(rel="stylesheet", href="./css/search.css")
+    article#search_bg_pic
+        #search_box_group
+            #search_box_input
+                .input-group
+                    input#search_button.form-control(type='text', placeholder='目的地ˋ城市ˋ地址', aria-label="Recipient's username", aria-describedby='basic-addon2', onclick='search_show()')
+                    .input-group-append
+                        button.btn.btn-outline-secondary(type='button') 搜尋GO!
+            #search_box_info
+                nav
+                    #nav-tab.nav.nav-tabs(role='tablist')
+                        a#nav-home-tab.nav-item.nav-link.active.col(data-toggle='tab', href='#nav-home', role='tab', aria-controls='nav-home', aria-selected='true') 搜尋歷史紀錄
+                        a#nav-profile-tab.nav-item.nav-link.col(data-toggle='tab', href='#nav-profile', role='tab', aria-controls='nav-profile', aria-selected='false') 地理位置
+                #nav-tabContent.tab-content.pl-3.pt-3
+                    #nav-home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='nav-home-tab')
+                        p 台中一中
+                        p 高雄火車站
+                    #nav-profile.tab-pane.fade(role='tabpanel', aria-labelledby='nav-profile-tab')
+                        p ...
+    #search_close_button(onclick='search_close()')
+    script.
+        function search_show(){ 
+            document.getElementById("search_box_info").style.display="block"; 
+            document.getElementById("search_close_button").style.display="block"; 
+        } 
+        function search_close(){ 
+            document.getElementById("search_box_info").style.display="none"; 
+            document.getElementById("search_close_button").style.display="none"; 
+        } 
+
+mixin estate
+    link(rel="stylesheet", href="./css/estate-banner.css")
+    article#carouselExampleIndicators.custom-carousel-fixed.carousel.slide(data-ride='carousel', data-interval='false')
+        ol.carousel-indicators
+            li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
+            li(data-target='#carouselExampleIndicators', data-slide-to='1')
+            li(data-target='#carouselExampleIndicators', data-slide-to='2')
+        .carousel-inner.radius_10
+            .carousel-item.active
+                img.d-block.w-100(src='images/estate01.png', alt='First slide')
+            .carousel-item
+                img.d-block.w-100(src='images/estate01.png', alt='Second slide')
+            .carousel-item
+                img.d-block.w-100(src='images/estate01.png', alt='Third slide')
+        a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
+            span(aria-hidden='true')
+                img(src='images/chevron-left.png', width='30vmin')
+            span.sr-only Previous
+        a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
+            span(aria-hidden='true')
+                img(src='images/chevron-right.png', width='30vmin')
+            span.sr-only Next
