@@ -123,11 +123,11 @@
         border-top: 2px solid white;
         border-right: 2px solid white; }
 
-form.main-form {
+.main-form {
   color: #686868;
   font-size: 1rem;
   display: block; }
-  form.main-form .each-list {
+  .main-form .each-list {
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
     padding-left: 1.2rem;
@@ -143,19 +143,19 @@ form.main-form {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
-    form.main-form .each-list .title {
+    .main-form .each-list .title {
       width: 100px;
       font-size: 1rem;
       margin-right: 1.6rem; }
-      form.main-form .each-list .title.full {
+      .main-form .each-list .title.full {
         width: 100%;
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex; }
-        form.main-form .each-list .title.full > input, form.main-form .each-list .title.full select {
+        .main-form .each-list .title.full > input, .main-form .each-list .title.full select {
           margin-left: 10px; }
-    form.main-form .each-list .input-box {
+    .main-form .each-list .input-box {
       -webkit-box-flex: 1;
       -webkit-flex: 1;
           -ms-flex: 1;
@@ -171,9 +171,9 @@ form.main-form {
       -webkit-flex-wrap: wrap;
           -ms-flex-wrap: wrap;
               flex-wrap: wrap; }
-  form.main-form select {
+  .main-form select {
     height: 34px; }
-  form.main-form input, form.main-form select {
+  .main-form input, .main-form select {
     -webkit-border-radius: 5px;
             border-radius: 5px;
     color: #686868;
@@ -185,42 +185,42 @@ form.main-form {
     padding-right: 10px;
     padding-top: 4px;
     padding-bottom: 4px; }
-    form.main-form input ~ label, form.main-form select ~ label {
+    .main-form input ~ label, .main-form select ~ label {
       margin-right: 20px; }
-    form.main-form input.input-sm, form.main-form select.input-sm {
+    .main-form input.input-sm, .main-form select.input-sm {
       width: 3rem; }
-    form.main-form input.input-lg, form.main-form select.input-lg {
+    .main-form input.input-lg, .main-form select.input-lg {
       padding-top: 0.8rem;
       padding-bottom: 0.8rem;
       padding-left: 1.6rem;
       padding-right: 1.6rem; }
-    form.main-form input.light-border, form.main-form select.light-border {
+    .main-form input.light-border, .main-form select.light-border {
       border: 1px solid #CCCCCC; }
-  form.main-form ::-webkit-input-placeholder {
+  .main-form ::-webkit-input-placeholder {
     color: #CCCCCC; }
-  form.main-form ::-moz-placeholder {
+  .main-form ::-moz-placeholder {
     color: #CCCCCC; }
-  form.main-form :-ms-input-placeholder {
+  .main-form :-ms-input-placeholder {
     color: #CCCCCC; }
-  form.main-form ::-ms-input-placeholder {
+  .main-form ::-ms-input-placeholder {
     color: #CCCCCC; }
-  form.main-form ::placeholder {
+  .main-form ::placeholder {
     color: #CCCCCC; }
-  form.main-form .comment {
+  .main-form .comment {
     font-size: 0.85rem;
     color: #686868;
     opacity: 0.8; }
-  form.main-form [type="radio"]:checked, form.main-form [type="radio"]:not(:checked) {
+  .main-form [type="radio"]:checked, .main-form [type="radio"]:not(:checked) {
     position: absolute;
     left: -9999px; }
-  form.main-form [type="radio"]:checked + label, form.main-form [type="radio"]:not(:checked) + label {
+  .main-form [type="radio"]:checked + label, .main-form [type="radio"]:not(:checked) + label {
     position: relative;
     padding-left: 28px;
     cursor: pointer;
     line-height: 20px;
     display: inline-block;
     color: #666; }
-  form.main-form [type="radio"]:checked + label:before, form.main-form [type="radio"]:not(:checked) + label:before {
+  .main-form [type="radio"]:checked + label:before, .main-form [type="radio"]:not(:checked) + label:before {
     content: '';
     position: absolute;
     left: 0;
@@ -231,7 +231,7 @@ form.main-form {
     -webkit-border-radius: 100%;
             border-radius: 100%;
     background: #fff; }
-  form.main-form [type="radio"]:checked + label:after {
+  .main-form [type="radio"]:checked + label:after {
     content: '';
     width: 12px;
     height: 12px;
@@ -244,7 +244,7 @@ form.main-form {
     -webkit-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease; }
-  form.main-form [type="radio"]:not(:checked) + label:after {
+  .main-form [type="radio"]:not(:checked) + label:after {
     content: '';
     width: 12px;
     height: 12px;
@@ -261,11 +261,33 @@ form.main-form {
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
         transform: scale(0); }
-  form.main-form [type="radio"]:checked + label:after {
+  .main-form [type="radio"]:checked + label:after {
     opacity: 1;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
         transform: scale(1); }
+
+.upload-area {
+  width: 100%;
+  border: 1px solid #CCCCCC;
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem; }
+  .upload-area .dotted-right {
+    border-right: 2px dotted #0072B1; }
+  .upload-area .text {
+    font-size: 1rem;
+    color: #686868;
+    text-align: center; }
+  .upload-area img {
+    width: 40%;
+    margin-top: 20%;
+    margin-bottom: 20%; }
 
 .svg-img {
   width: 1.92rem;
@@ -298,6 +320,9 @@ form.main-form {
   .next-btn.sm-btn {
     font-size: 1rem;
     letter-spacing: 2px; }
+  .next-btn.xs-btn {
+    font-size: 0.85rem;
+    letter-spacing: 1px; }
   .next-btn:hover, .next-btn:active, .next-btn:visited {
     color: white;
     background-color: #E86D79;
@@ -327,3 +352,83 @@ form.main-form {
     background-color: #435A8F; }
   .next-btn.wechat {
     background-color: #5AC158; }
+
+.table-content {
+  border: 1px solid #CCCCCC;
+  padding: 1rem; }
+  .table-content .table-head {
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 0.85rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    border-bottom: 1px solid #CCCCCC; }
+    .table-content .table-head .dollars {
+      font-size: 1.6rem;
+      color: #FF848B;
+      margin-right: 20px; }
+  .table-content .table-bottom {
+    padding-top: 1.2rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .table-content .table-bottom .page-option {
+      cursor: pointer;
+      color: #686868;
+      font-size: 0.85rem;
+      width: 1.7rem;
+      line-height: 1.7rem;
+      font-weight: normal;
+      text-align: center;
+      -webkit-border-radius: 4px;
+              border-radius: 4px; }
+      .table-content .table-bottom .page-option .fa {
+        font-size: 1.2rem; }
+      .table-content .table-bottom .page-option.active {
+        background-color: #CCCCCC; }
+
+table.main-table {
+  width: 100%;
+  color: #686868; }
+  table.main-table tr {
+    border-bottom: 1px solid #CCCCCC; }
+  table.main-table th, table.main-table td {
+    text-align: center;
+    font-weight: 200; }
+    table.main-table th > .title, table.main-table td > .title {
+      padding: 0.85rem;
+      white-space: nowrap; }
+  table.main-table .desc {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    font-size: 0.85rem; }
+    table.main-table .desc.nowrap {
+      white-space: nowrap; }
+    table.main-table .desc .fa-external-link {
+      font-size: 1.2rem;
+      color: #0072B1;
+      cursor: pointer; }

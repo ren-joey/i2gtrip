@@ -34,17 +34,17 @@ block content
             .each-list
                 .title 請問您是？
                 .input-box
-                    input#test1(type='radio', name='radio-group', checked='')
-                    label(for='test1') 房東本人
-                    input#test2(type='radio', name='radio-group')
-                    label(for='test2') 代理人
-                    input#test3(type='radio', name='radio-group')
-                    label(for='test3') 房屋仲介
+                    input#UN1(type='radio', name='user-name', checked='')
+                    label(for='UN1') 房東本人
+                    input#UN2(type='radio', name='user-name')
+                    label(for='UN2') 代理人
+                    input#UN3(type='radio', name='user-name')
+                    label(for='UN3') 房屋仲介
             hr
             .each-list
                 .title 可遷入日期
                 .input-box
-                    input.datepicker(type="text" placeholder="請選擇日期")
+                    input.datepicker#DP(type="text" placeholder="請選擇日期")
             hr
             .each-list
                 .title 房源地址
@@ -53,16 +53,16 @@ block content
                         option 縣市
                     select
                         option 地區
-                    input(type="text" placeholder="道路或街名或村里名稱")
-                    input.input-sm(type="text")
+                    input#Addr1(type="text" placeholder="道路或街名或村里名稱")
+                    input#Addr2.input-sm(type="text")
                     | 巷  
-                    input.input-sm(type="text")
+                    input#Addr3.input-sm(type="text")
                     | 弄  
-                    input.input-sm(type="text")
+                    input#Addr4.input-sm(type="text")
                     | 號之  
-                    input.input-sm(type="text")
+                    input#Addr5.input-sm(type="text")
                     | 樓之  
-                    input.input-sm(type="text")
+                    input#Addr6.input-sm(type="text")
                     | 室
                     .comment
                         | 此為隱私資訊，我們只會將您的具體地址分享給已確認預訂的房客。

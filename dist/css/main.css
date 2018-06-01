@@ -7,7 +7,7 @@ body {
 li {
   list-style-type: none; }
 
-h1#SEO-title, h2#SEO-title {
+h1.SEO-title, h2.SEO-title {
   display: none; }
 
 h1, h2, h3, h4 {
@@ -78,7 +78,7 @@ a {
     margin-bottom: 2rem;
     color: #686868; }
   .box > .text {
-    font-size: 0.85rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
     color: #686868; }
   .box > .num {
@@ -104,6 +104,9 @@ a {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
+  .box.h-100-box {
+    height: -webkit-calc( 100% - 1.7rem);
+    height: calc( 100% - 1.7rem); }
 
 .d-block {
   display: block; }

@@ -94,7 +94,7 @@ $form-grey: #E6E6E6
                 border-top: 2px solid white
                 border-right: 2px solid white
 
-form.main-form
+.main-form
     color: $grey
     font-size: $font-sm
     display: block
@@ -195,6 +195,22 @@ form.main-form
             -webkit-transform: scale(1)
             transform: scale(1)
 
+.upload-area
+    width: 100%
+    border: 1px solid $median-grey
+    +margins($font-md)
+    +paddings($font-lg)
+    .dotted-right
+        border-right: 2px dotted $main-blue
+    .text
+        font-size: $font-sm
+        color: $grey
+        text-align: center
+    img
+        width: 40%
+        margin-top: 20%
+        margin-bottom: 20%
+
 .svg-img
     width: $font-lg * 1.2
     height: $font-lg * 1.2
@@ -218,6 +234,9 @@ form.main-form
     &.sm-btn
         font-size: $font-sm
         letter-spacing: 2px
+    &.xs-btn
+        font-size: $font-xs
+        letter-spacing: 1px
     &:hover, &:active, &:visited
         color: white
         background-color: $dean-pink
@@ -245,8 +264,64 @@ form.main-form
     &.wechat
         background-color: $wechat-green
 
+.table-content
+    border: 1px solid $median-grey
+    padding: $font-sm
+    .table-head
+        padding-top: $font-lg
+        padding-bottom: $font-lg 
+        padding-left: $font-sm
+        padding-right: $font-sm
+        font-size: $font-xs
+        display: flex
+        align-items: flex-end
+        justify-content: space-around
+        border-bottom: 1px solid $median-grey
+        .dollars
+            font-size: $font-lg
+            color: $main-pink
+            margin-right: 20px
+    .table-bottom
+        padding-top: $font-md
+        padding-left: $font-md
+        padding-right: $font-md
+        display: flex
+        justify-content: center
+        align-items: center
+        .page-option
+            cursor: pointer
+            color: $grey
+            font-size: $font-xs
+            width: $font-xs * 2
+            line-height: $font-xs * 2
+            font-weight: normal
+            text-align: center
+            border-radius: 4px
+            .fa
+                font-size: $font-md
+            &.active
+                background-color: $median-grey
+table.main-table
+    width: 100%
+    color: $grey
+    tr
+        border-bottom: 1px solid $median-grey
+    th, td
+        text-align: center
+        font-weight: 200
+        > .title
+            padding: $font-xs
+            white-space: nowrap 
+    .desc 
+        +paddings( $font-md )
+        font-size: $font-xs
+        &.nowrap
+            white-space: nowrap
+        .fa-external-link
+            font-size: $font-md
+            color: $main-blue
+            cursor: pointer
 
-        
-
+    
 
 

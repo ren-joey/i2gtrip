@@ -155,15 +155,15 @@ block content
                     | 您有其他相似的房源嗎？選擇的相似房源，可以協助填寫以下資訊
                     br
                 .input-box.mt-3
-                    .next-btn.primary 了解更多&nbsp;&nbsp;&nbsp;&nbsp;〉&nbsp;
+                    .next-btn.primary.sm-btn 了解更多&nbsp;&nbsp;〉
             hr
             .each-list
                 .title 可以養寵物嗎
                 .input-box
-                    input#p1(type="radio" name="pet" checked="")
-                    label(for="p1") 不可以
-                    input#p2(type="radio" name="pet")
-                    label(for="p2") 可以
+                    input#Pet1(type="radio" name="pet" checked="")
+                    label(for="Pet1") 不可以
+                    input#Pet2(type="radio" name="pet")
+                    label(for="Pet2") 可以
                     select
                         option 限養貓
             hr
@@ -178,18 +178,18 @@ block content
             .each-list
                 .title 對房客的身份要求
                 .input-box
-                    input#test1(type='radio', name='radio-group', checked='')
+                    input#UJ0(type='radio', name='user-job', checked='')
                     label(for='test1') 無
                     br
-                    input#test2(type='radio', name='radio-group')
-                    label(for='test2') 上班族
-                    input#test2(type='radio', name='radio-group')
-                    label(for='test2') 學生
-                    input#test2(type='radio', name='radio-group')
-                    label(for='test2') 家庭
-                    input#test2(type='radio', name='radio-group')
-                    label(for='test2') 其他，限
-                    input(type="text")
+                    input#UJ1(type='radio', name='user-job')
+                    label(for='UJ1') 上班族
+                    input#UJ2(type='radio', name='user-job')
+                    label(for='UJ2') 學生
+                    input#UJ3(type='radio', name='user-job')
+                    label(for='UJ3') 家庭
+                    input#UJ4(type='radio', name='user-job')
+                    label(for='UJ4') 其他，限
+                    input#UJ4-1(type="text")
             hr
             .each-list
                 .title 最短租期

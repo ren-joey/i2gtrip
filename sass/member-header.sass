@@ -4,8 +4,10 @@
 @import mixins/ease
 
 header.member-header
-    padding-top: 80px
+    padding-top: 100px
     background-color: $main-pink
+    +breakpoint(pad-portrait)
+        padding-top: 80px
     > nav.container
         ul.member-menu-bar
             margin-left: 0
