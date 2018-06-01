@@ -4,16 +4,55 @@
 .widget
     border: 1px solid $median-grey
     margin-bottom: 20px
-    .title
+    > .title
         color: $grey
         background-color: $median-grey
         border: 1px solid
         font-size: $font-sm
         +paddings($font-md)
     .user-img
-        > img
-            width: 100%
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      > img
+          width: 80%
     .widget-content
+      padding: 2rem
+      .each-list
+        +paddings($font-md)
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        color: $grey
+        > .title
+          width: 100px
+          margin-right: $font-lg
+        .link-addr
+          flex: 1
+          display: flex
+          align-items: center
+          .cancel-link
+            margin-left: 10px
+            > .fa-times-circle
+              color: $google-red
+              margin-right: 5px
+          .unlink
+            cursor: pointer
+            font-size: $font-sm
+            +paddings($font-md)
+            color: $grey
+          .link-box
+            font-size: $font-sm
+            +paddings($font-md)
+            color: $grey
+            border: 1px solid $median-grey
+            > .fa-check-circle
+              color: $green
+              margin-right: 5px
+        .fa-plus
+            color: $green
+            margin-right: 5px
         
 
 .menu-container
