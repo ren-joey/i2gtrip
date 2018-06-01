@@ -58,10 +58,9 @@ block content
                 .title 社區
                 .input-box
                     input#Community(type="text" placehold)
-                .title 房屋型態
+                .title 總樓層數
                 .input-box
-                    select
-                        option 電梯大樓
+                    input.input-sm#Fronts(type="text" placehold)
             .each-list
                 .title 房型
                 .input-box
@@ -74,10 +73,10 @@ block content
             .each-list
                 .title 管理費
                 .input-box
-                    input#MF1(type='radio', name='radio-group', checked='')
-                    label(for='test1') 無
-                    input#MF2(type='radio', name='radio-group')
-                    label(for='test2') 有，金額
+                    input#MF1(type='radio', name='management-fee', checked='')
+                    label(for='MF1') 無
+                    input#MF2(type='radio', name='management-fee')
+                    label(for='MF2') 有，金額
                     input#MF2-1(type="text" placeholder="輸入金額")
             hr
             .each-list
